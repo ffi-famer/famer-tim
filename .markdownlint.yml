@@ -1,0 +1,12 @@
+# Ignore excessive line length lint
+"MD013": false
+# ignore inline html
+"MD033": false
+# Allow multiple headings with the same name (in particualar, if they are unique within their parent heading)
+"MD024": false
+# Allow multiple h1
+"MD025": false
+# Allow mixing heading notations
+"MD003": false
+# Allow to start with a treqs element (that may be the h1 heading)
+"MD041": false

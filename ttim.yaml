@@ -1,0 +1,135 @@
+name: FAMER Requirements Type and Trace Information Model (TTIM)
+version: 0.1.0
+description: Instantiation of the FAMER information model for treqs
+author: Hina Saeeda, Eric Knauss, Claudia Sevilla Eslava
+types:
+ # ###
+ # Trying to get the context of annotation requirements correct with respect to standards
+ # From ISO21448:
+  - name: intended-functionality
+    outlinks: []
+    inlinks:
+    - type: context-for
+      source: operational-design-domain
+      required: 'true'
+  - name: functional-safety-concept
+    inlinks:
+    - type: includes
+      source: intended-functionality
+    outlinks: []
+  - name: functional-safety-requirement
+    inlinks:
+    - type: solved-by
+      source: functional-safety-concept
+    outlinks: []
+  - name: operational-design-domain
+    outlinks: []
+  # We may not need the functional modifications and known limitations, those may be covered or hidden behind the intended functionality.
+  # From ISO8800:
+  - name: ai-safety-requirement
+    inlinks:
+    - type: demands
+      source: functional-safety-requirement
+      required: 'true'
+    outlinks: []
+  - name: dataset-requirement
+    inlinks:
+    - type: foundation-for
+      source:
+      - ai-safety-requirement
+      - intended-functionality
+      required: 'true'
+    outlinks: []
+  - name: annotation-requirement
+    inlinks:
+    - type: augmented-by
+      source: dataset-requirement
+      required: 'true'
+    outlinks:
+    - type: specifies
+      target: annotation-guideline
+  - name: annotation-guideline
+    outlinks:
+    - type: specifies
+      target: annotation-tool
+    - type: complies-to
+      target: annotation-standard
+    - type: describes
+      target: dataset-annotation
+  - name: dataset-annotation
+    outlinks:
+    - type: training-data-for
+      target: ai-model
+    - type: evaluation-data-for
+      target: ai-model
+  - name: ai-model
+    outlinks:
+    - type: satisfies
+      target: 
+      - ai-safety-requirement
+      - intended-functionality
+  - name: dataset-annotation-check
+    outlinks:
+    - type: checks
+      target:
+      - dataset-annotation
+    - type: produces
+      target: dataset-annotation-check-result
+    inlinks:
+    - type: input
+      source:
+          - annotation-guideline
+          - annotation-requirement
+          - annotation-standard
+  - name: dataset-annotation-check-result
+    outlinks:
+    - type: validated-using
+      target: annotation-standard
+    - type: validates
+      target: dataset-annotation
+  - name: annotation-tool
+    outlinks:
+    - type: creates
+      target: dataset-annotation
+  - name: annotation-standard
+    outlinks: []
+
+  # #####
+  # TTIM for compliance work
+  # A commitment to do something because of a clause in a standard
+  - name: compl.requirement
+    outlinks: 
+    - type: derivedFrom
+      target: compl.clause
+  # A thing required by a standard
+  - name: compl.clause
+    outlinks: 
+    - type: from
+      target: compl.standard
+      required: 'true'
+    - type: relatesTo
+      target: compl.abstractBoundaryObj
+  # An artifact required by a standard
+  - name: compl.abstractBoundaryObj
+    outlinks: 
+    - type: from
+      target: compl.standard
+      required: 'true'
+    inlinks:
+    - type: implements
+      source: compl.systemLevelBoundaryObj
+      # required: 'true'
+  # An artifact in our system development repo that corresponds to an abstract boundary object
+  - name: compl.systemLevelBoundaryObj
+    outlinks: []
+  # A specific governing document for our system under development
+  - name: compl.standard
+    outlinks: []
+  # A design decision for the FAMER TIM that is based on compl.requirements
+  - name: famer.tim.modeling-decision
+    outlinks:
+    - type: affects
+    - type: motivatedBy
+      target: compl.requirement
+      required: 'true'
+ 
