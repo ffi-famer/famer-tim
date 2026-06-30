@@ -8,10 +8,6 @@ types:
  # From ISO21448:
   - name: intended-functionality
     outlinks: []
-    inlinks:
-    - type: context-for
-      source: operational-design-domain
-      required: 'true'
   - name: functional-safety-concept
     inlinks:
     - type: includes
@@ -23,6 +19,10 @@ types:
       source: functional-safety-concept
     outlinks: []
   - name: operational-design-domain
+    inlinks:
+    - type: depends-on
+      source: intended-functionality
+      required: 'true'
     outlinks: []
   # We may not need the functional modifications and known limitations, those may be covered or hidden behind the intended functionality.
   # From ISO8800:
@@ -51,11 +51,9 @@ types:
   - name: annotation-guideline
     outlinks:
     - type: specifies
-      target: annotation-tool
-    - type: complies-to
-      target: annotation-standard
-    - type: describes
-      target: dataset-annotation
+      target:
+      - annotation-tool
+      - dataset-annotation
   - name: dataset-annotation
     outlinks:
     - type: training-data-for
@@ -80,20 +78,17 @@ types:
       source:
           - annotation-guideline
           - annotation-requirement
-          - annotation-standard
   - name: dataset-annotation-check-result
     outlinks:
-    - type: validated-using
-      target: annotation-standard
     - type: validates
       target: dataset-annotation
   - name: annotation-tool
     outlinks:
     - type: creates
       target: dataset-annotation
-  - name: annotation-standard
+  # A tim element that is deprecated:
+  - name: deprecated-tim-element
     outlinks: []
-
   # #####
   # TTIM for compliance work
   # A commitment to do something because of a clause in a standard

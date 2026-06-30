@@ -414,3 +414,55 @@ Rationale:
 
 </treqs-link>
 </treqs-element>
+<treqs-element id="bd41fd67a783159c85d613035ea1962f" type="famer.tim.modeling-decision">
+
+Decision: Remove Annotation standard
+---
+
+<treqs-link type="affects" target="9f3344e454894c9e9141cdc835231f4d"/>
+
+Rationale:
+
+<treqs-link type="motivatedBy" target="69c0ff8e30134ffdbcb8bb0b645907cb">
+
+- FAMER experts inform us that no accepted standard exists and that annotation requirements and annotation guidelines are sufficient to define data needs.
+</treqs-link>
+</treqs-element>
+<treqs-element id="9f3344e454894c9e9141cdc835231f4d" type="deprecated-tim-element">
+
+Annotation Standard (deprecated
+---
+
+Todos:
+
+- [ ] Provide an example - not needed
+- [x] Decide whether to keep it - REMOVE
+
+### FAMER IM Status: needs work/needs expert evaluation
+
+- Note that IM has Standard and Application Standard
+- These might be internal industry standards that define annotation guidelines. Perhaps those should be special annotation guidelines, e.g. generic annotation guidelines.
+
+- [x] rename to AnnotationStandard?
+- [ ] ask Participant 1
+  - There is no real annotation standard
+  - there is standardization of the output, how to store Dataset Annotations
+    - those are not widely used, converters needed
+  - annotation standard might be misleading, how to do annotations should be transparent, clients should not care about it. they should care about the speed and cost and accuracy of annotation, not on how to do it. Example: bounding box for pedestrians; one could use a polygon, but that is much more expensive. There is no standard, though, so negotiation between client and annotation provider
+
+- [ ] Ask Researcher 1 if we actually need it
+  - Researcher 2: We might need a specification or customer-supplier agreement.
+
+</treqs-element>
+<treqs-element id="6a01b91f618424e7e97afbae00018bfb" type="famer.tim.modeling-decision">
+
+Decision: reverse/rename link between ODD and Intended Functionality
+---
+
+<treqs-link target="5a0039ffee7a4924bfe423956918f750" type="affects"/>
+<treqs-link target="9c3484c82d124e76a694554125353df9" type="affects"/>
+<treqs-link target="19c6d0ea9e2f61160c68a5569f784f7c" type="motivatedBy"/>
+
+
+</treqs-element>
+

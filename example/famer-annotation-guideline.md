@@ -64,7 +64,7 @@ Concrete instructions for annotating objects captured by a vehicle equipped with
 - Check 3D-to-2D projection alignment
 - Verify object_id consistency between 2D/3D
 
-<treqs-link type="describes" target="b4756dba365711f185b3467a017f3d7d" >
+<treqs-link type="specifies" target="b4756dba365711f185b3467a017f3d7d" >
 Describes how to create the CAS object detection dataset.
 </treqs-link>
 
