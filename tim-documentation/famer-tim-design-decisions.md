@@ -1,5 +1,46 @@
 # FAMER TIM Design Decisions
 
+This file explains TIM design decisions.
+Each TIM design decision *affects* a primary TIM element (i.e. a traceable artifact) and links them to a motivating compliance requirement.
+
+The ``treqs`` tool can be used to explore this traceability:
+
+```bash
+# List all TIM design decisions:
+treqs list --type famer.tim.modeling-decision
+
+# To explore the impact and motivation of an individual design decision, select
+# its UID from the output of the previous command. Then insert it into the 
+# following command:
+treqs list --outlinks --uid b44158eee5584f63818c1a70f869f879
+
+# The output can be provided as a graphical model, using plantuml:
+treqs list --outlinks --plantuml --uid b44158eee5584f63818c1a70f869f879 
+
+# Finally, treqs can follow links recursively, showing all dependent links:
+treqs list --outlinks --plantuml --followlinks True --uid b44158eee5584f63818c1a70f869f879 
+```
+
+Here is one example of a corresponding traceability graph which sets one design decision in context.
+More details can be found in the remaining parts of this file.
+
+```mermaid
+graph TD
+    b44158eee5584f63818c1a70f869f879["Decision: ``Dataset-Annotation Check`` and ``Dataset-Anno...<br/>[famer.tim.modeling-decision]"]
+    9f336b1a28b7439899012241f15623ec["Dataset Annotation Check<br/>[dataset-annotation-check]"]
+    b44158eee5584f63818c1a70f869f879 -->|affects| 9f336b1a28b7439899012241f15623ec
+    7b8e858a6fe84f67843584e2f2ba8929["Dataset Annotation Check Result<br/>[dataset-annotation-check-result]"]
+    b44158eee5584f63818c1a70f869f879 -->|affects| 7b8e858a6fe84f67843584e2f2ba8929
+    7513380ac18611f0ac17467a017f3d7d["ISO-21448-R4: Acceptance criteria for residual risk<br/>[compl.requirement]"]
+    b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 7513380ac18611f0ac17467a017f3d7d
+    47174abc01b011f1ad2f467a017f3d7d["ISO-26262-6-R1: Software system requirements derived from...<br/>[compl.requirement]"]
+    b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 47174abc01b011f1ad2f467a017f3d7d
+    47e7ac2a01b011f1949d467a017f3d7d["ISO-26262-6-R2: Verification of software safety requirements<br/>[compl.requirement]"]
+    b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 47e7ac2a01b011f1949d467a017f3d7d
+    0e53f83ec7d011f0a761467a017f3d7d["ISO-8800-R2: Measurable KPIs for AI safety requirements<br/>[compl.requirement]"]
+    b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 0e53f83ec7d011f0a761467a017f3d7d
+```
+
 <treqs-element id="1fd8176242ff442ba47446a35f9dcf5f" type="famer.tim.modeling-decision">
 
 Decision: Split ``requirement`` into ``annotationRequirement``and ``systemRequirement``
