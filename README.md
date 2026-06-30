@@ -157,7 +157,7 @@ Beyond standards, we also derive ``compl.requirements`` from interaction with ex
 Starting from a first draft of a TIM, we then iteratively improve it to align it with the (growing) set of ``compl.requirements``.
 Each change has been documented as a ``famer.tim.modeling-decision``.
 Each TIM modeling decision is traced back to the requirement(s) that motivated it and the TIM elements it affects; these decisions can be found in [famer-tim-design-decisions.md](tim-documentation/famer-tim-design-decisions.md).
-For traceability, we rely on ``treqs``' explicit tracelinks (``treqs-link``s) which are visible in the source view of markdown files. 
+For traceability, we rely on ``treqs`` explicit tracelinks (``treqs-link``) which are visible in the source view of markdown files. 
 TReqs defines artifacts and tracelinks in its [metamodel](ttim.yaml) and enforces valid traceability via the CLI command ``treqs check``.
 
 The following graph shows an example of the traceability from TIM artifacts over modeling decisions to compliance requirements:
