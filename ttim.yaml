@@ -51,9 +51,9 @@ types:
   - name: annotation-guideline
     outlinks:
     - type: specifies
-      target: annotation-tool
-    - type: describes
-      target: dataset-annotation
+      target:
+      - annotation-tool
+      - dataset-annotation
   - name: dataset-annotation
     outlinks:
     - type: training-data-for

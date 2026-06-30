@@ -157,7 +157,7 @@ Participant 1:
 - Guideline may require experience and often written/owned by annotation provide
 
 <treqs-link type="specifies" target="2e6fe9901849498f86d6c514c3c824e2" />
-<treqs-link type="describes" target="3eac6b785ba245a284185f6edbfc0767">
+<treqs-link type="specifies" target="3eac6b785ba245a284185f6edbfc0767">
 
 - renamed ``applied_to`` to ``describes``
 
