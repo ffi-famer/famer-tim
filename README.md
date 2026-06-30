@@ -157,6 +157,8 @@ Beyond standards, we also derive ``compl.requirements`` from interaction with ex
 Starting from a first draft of a TIM, we then iteratively improve it to align it with the (growing) set of ``compl.requirements``.
 Each change has been documented as a ``famer.tim.modeling-decision``.
 Each TIM modeling decision is traced back to the requirement(s) that motivated it and the TIM elements it affects; these decisions can be found in [famer-tim-design-decisions.md](tim-documentation/famer-tim-design-decisions.md).
+For traceability, we rely on ``treqs``' explicit tracelinks (``treqs-link``s) which are visible in the source view of markdown files. 
+TReqs defines artifacts and tracelinks in its [metamodel](ttim.yaml) and enforces valid traceability via the CLI command ``treqs check``.
 
 The following graph shows an example of the traceability from TIM artifacts over modeling decisions to compliance requirements:
 
@@ -177,53 +179,22 @@ graph TD
     b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 0e53f83ec7d011f0a761467a017f3d7d
 ```
 
-The complete traceability
-from standards clauses through requirements to TIM elements can be
-explored via the open-source repository accompanying this
-paper\footnote{TIM artefacts: \url{https://github.com/ffi-famer/famer-tim}.};
-further details on the TReqs format and tooling are documented in that
-repository's README rather than repeated here.
- 
-\paragraph{Requirement refinement and traceability modelling}
- 
-Each extracted requirement was then enriched with explicit trace links
-(\texttt{treqs-link}) connecting it back to its originating standard
-clause and forward to the TIM elements it affects. Three link types
-were used:
- 
-\begin{itemize}
-    \item \texttt{derivedFrom} --- which standard clause(s) motivate the requirement;
-    \item \texttt{confirms} --- which TIM elements satisfy or evidence compliance with the requirement;
-    \item \texttt{relatesTo} --- which TIM elements are affected by the requirement without directly confirming it.
-\end{itemize}
- 
-This three-link scheme operationalises the \texttt{compl.clause} $\rightarrow$
-\texttt{compl.standard} $\rightarrow$ TIM-construct chain: a clause is
-\texttt{derivedFrom} its standard, a requirement is \texttt{derivedFrom}
-one or more clauses, and the requirement in turn \texttt{confirms} or
-\texttt{relatesTo} specific TIM constructs. Table~\ref{tab:standards-decisions}
-reports representative instances of this chain, including ISO-21448-R2
-(Operational Design Domain), which \texttt{confirms} the
-\texttt{OperationalDesignDomain} construct, and ISO-8800-R5 (development
-measures in AI model training), which \texttt{relatesTo}
-\texttt{TrainingConfiguration}. ISO~26262 did not contribute additional
-entries to the final linkage table; rather, it served as an important
-validation source to confirm the TIM constructs derived from ISO~8800
-and ISO~21448 also satisfy traditional software expectations.
-
 ## Authors and acknowledgment
+
 Created by:
 
 - Claudia Sevilla Eslava
 - Hina Saeeda
-- Erik Knauss
+- Eric Knauss
 
 Supervisor: Eric Knauss
 
 ## Project Status
+
 This is a research-in-progress model. Various elements and link directions are still under expert evaluation.
 
 ## License
+
 Licensed with the [MIT License](https://opensource.org/licenses/MIT). 
 
 
