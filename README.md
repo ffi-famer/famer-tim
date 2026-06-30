@@ -20,7 +20,7 @@ A Traceability Information Model (TIM) for AI-based perception systems in safety
 FAMER TIM defines the artifact types and traceability links needed to demonstrate compliance with ISO safety standards when developing AI-based
 perception systems. It connects functional safety concepts, AI safety requirements, dataset and annotation requirements, AI models, and validation results into a single traceable model.
 
-The model is implemented using [Treqs](https://pypi.org/project/treqs/), an open source command-line tool for managing textual requirements and traceability directly in Git-versioned Markdown files.
+The model is implemented using [Treqs](https://pypi.org/project/treqs-ng/), an open source command-line tool for managing textual requirements and traceability directly in Git-versioned Markdown files.
 
 
 ## Installation
