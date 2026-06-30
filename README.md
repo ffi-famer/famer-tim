@@ -114,10 +114,10 @@ The following graph shows a visualization of the model derived from the file [fa
 ```mermaid
 graph TD
     9c3484c82d124e76a694554125353df9["Operational Design Domain (ODD)<br/>[operational-design-domain]"]
-    9c3484c82d124e76a694554125353df9 -->|context-for| 5a0039ffee7a4924bfe423956918f750
     5a0039ffee7a4924bfe423956918f750["Intended Functionality<br/>[intended-functionality]"]
     5a0039ffee7a4924bfe423956918f750 -->|includes| 1f0e57fcf2ed4e5d9547a64d5f6a3994
     5a0039ffee7a4924bfe423956918f750 -->|foundation-for| 667438ccdfef413aa485ff2581d6ffc5
+    5a0039ffee7a4924bfe423956918f750 -->|depends-on| 9c3484c82d124e76a694554125353df9
     1f0e57fcf2ed4e5d9547a64d5f6a3994["Functional Safety Concept<br/>[functional-safety-concept]"]
     1f0e57fcf2ed4e5d9547a64d5f6a3994 -->|solved-by| de34d5f3d3a24e8ba360001b5aa25922
     de34d5f3d3a24e8ba360001b5aa25922["Functional Safety Requirement<br/>[functional-safety-requirement]"]
@@ -131,7 +131,7 @@ graph TD
     40a7bac946a34174844e42378d23e489 -->|input| 9f336b1a28b7439899012241f15623ec
     79a0763913e946e7b238deb3eb705ecb["Annotation Guideline<br/>[annotation-guideline]"]
     79a0763913e946e7b238deb3eb705ecb -->|specifies| 2e6fe9901849498f86d6c514c3c824e2
-    79a0763913e946e7b238deb3eb705ecb -->|describes| 3eac6b785ba245a284185f6edbfc0767
+    79a0763913e946e7b238deb3eb705ecb -->|specifies| 3eac6b785ba245a284185f6edbfc0767
     79a0763913e946e7b238deb3eb705ecb -->|input| 9f336b1a28b7439899012241f15623ec
     3eac6b785ba245a284185f6edbfc0767["Dataset Annotation<br/>[dataset-annotation]"]
     3eac6b785ba245a284185f6edbfc0767 -->|training-data-for| 4134ca2ab0434822aa98c16f18b4db0d
