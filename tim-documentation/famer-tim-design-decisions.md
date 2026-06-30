@@ -454,5 +454,15 @@ Todos:
   - Researcher 2: We might need a specification or customer-supplier agreement.
 
 </treqs-element>
+<treqs-element id="6a01b91f618424e7e97afbae00018bfb" type="famer.tim.modeling-decision">
 
+Decision: reverse/rename link between ODD and Intended Functionality
+---
+
+<treqs-link target="5a0039ffee7a4924bfe423956918f750" type="affects"/>
+<treqs-link target="9c3484c82d124e76a694554125353df9" type="affects"/>
+<treqs-link target="19c6d0ea9e2f61160c68a5569f784f7c" type="motivatedBy"/>
+
+
+</treqs-element>
 

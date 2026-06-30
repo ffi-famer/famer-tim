@@ -45,9 +45,5 @@ Collision Avoidance by Steering (CAS) ODD
 - Requires visible lane markings for path planning
 - Requires functional object detection and tracking
 
-<treqs-link type="context-for" target="629232fa4abe11f1b4ee467a017f3d7e">
-
-> Provides operational context for the CAS intended functionality.
-</treqs-link>
-
 </treqs-element>
+

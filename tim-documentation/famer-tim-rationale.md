@@ -25,10 +25,9 @@ Operational Design Domain (ODD)
 
 Todos:
 
-- [ ] Make sure that all neighbouring artifacts are in TIM
-- [ ] Provide an example
+- [x] Make sure that all neighbouring artifacts are in TIM
+- [x] Provide an example
 
-<treqs-link type="context-for" target="5a0039ffee7a4924bfe423956918f750" />
 </treqs-element>
 <treqs-element id="5a0039ffee7a4924bfe423956918f750" type="intended-functionality">
 
@@ -42,7 +41,7 @@ Todos:
 
 <treqs-link type="includes" target="1f0e57fcf2ed4e5d9547a64d5f6a3994" />
 <treqs-link type="foundation-for" target="667438ccdfef413aa485ff2581d6ffc5" />
-
+<treqs-link type="depends-on" target="9c3484c82d124e76a694554125353df9" />
 </treqs-element>
 <treqs-element id="1f0e57fcf2ed4e5d9547a64d5f6a3994" type="functional-safety-concept">
 

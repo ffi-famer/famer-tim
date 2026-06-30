@@ -40,4 +40,9 @@ CAS is a driving assistance function aimed to avoid/reduce collisions by activel
 > Provides foundation for dataset requirements.
 </treqs-link>
 
+<treqs-link type="depends-on" target="727a144c3ffd11f193ca467a017f3d7e">
+
+> The definition of intentend functionality depends on a target operational design domain. I.e., the intended functionality is only valid in one or more specifically design target environments.
+</treqs-link>
 </treqs-element>
+

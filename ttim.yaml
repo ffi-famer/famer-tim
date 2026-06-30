@@ -8,10 +8,6 @@ types:
  # From ISO21448:
   - name: intended-functionality
     outlinks: []
-    inlinks:
-    - type: context-for
-      source: operational-design-domain
-      required: 'true'
   - name: functional-safety-concept
     inlinks:
     - type: includes
@@ -23,6 +19,10 @@ types:
       source: functional-safety-concept
     outlinks: []
   - name: operational-design-domain
+    inlinks:
+    - type: depends-on
+      source: intended-functionality
+      required: 'true'
     outlinks: []
   # We may not need the functional modifications and known limitations, those may be covered or hidden behind the intended functionality.
   # From ISO8800:

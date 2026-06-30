@@ -31,3 +31,14 @@ FAMER TIM shall be validated with experts from FAMER consortium
 Feedback from iterative validation workshops may lead to FAMER design decisions that are then motivated in this way.
 The concrete feedback will be either logged in the design decision or in famer-tim-rationale.md.
 </treqs-element>
+<treqs-element id="19c6d0ea9e2f61160c68a5569f784f7c" type="compl.requirement">
+
+FAMER TIM shall be compatible with a realistic model-based engineering method
+---
+
+Parallel to the bottom-up development of the FAMER TIM in this repository, the OEM also developed the FAMER TIM top down, starting from their systems engineering needs.
+For this purpose, we have sketched a realistic model-based systems engineering method that makes use of the TIM elements.
+
+Aligning the FAMER TIM with this MBSE method helps to ensure practical value of the TIM.
+</treqs-element>
+
