@@ -52,8 +52,6 @@ types:
     outlinks:
     - type: specifies
       target: annotation-tool
-    - type: complies-to
-      target: annotation-standard
     - type: describes
       target: dataset-annotation
   - name: dataset-annotation
@@ -80,20 +78,17 @@ types:
       source:
           - annotation-guideline
           - annotation-requirement
-          - annotation-standard
   - name: dataset-annotation-check-result
     outlinks:
-    - type: validated-using
-      target: annotation-standard
     - type: validates
       target: dataset-annotation
   - name: annotation-tool
     outlinks:
     - type: creates
       target: dataset-annotation
-  - name: annotation-standard
+  # A tim element that is deprecated:
+  - name: deprecated-tim-element
     outlinks: []
-
   # #####
   # TTIM for compliance work
   # A commitment to do something because of a clause in a standard

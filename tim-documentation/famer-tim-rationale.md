@@ -158,7 +158,6 @@ Participant 1:
 - Guideline may require experience and often written/owned by annotation provide
 
 <treqs-link type="specifies" target="2e6fe9901849498f86d6c514c3c824e2" />
-<treqs-link type="complies-to" target="9f3344e454894c9e9141cdc835231f4d" />
 <treqs-link type="describes" target="3eac6b785ba245a284185f6edbfc0767">
 
 - renamed ``applied_to`` to ``describes``
@@ -314,7 +313,6 @@ Todos:
 - Compare with other TIMs if this is usually included
 - Participant 2 needed, since it is an iterative process, so the results should likely play into the safety argumentation. unsure
 
-<treqs-link type="validated-using" target="9f3344e454894c9e9141cdc835231f4d" />
 <treqs-link type="validates" target="3eac6b785ba245a284185f6edbfc0767" />
 </treqs-element>
 
@@ -351,35 +349,6 @@ Tool version (and tool) is missing in information model. Do we need it? Perhaps,
 </treqs-element>
 
 ---
-
-<treqs-element id="9f3344e454894c9e9141cdc835231f4d" type="annotation-standard">
-
-Annotation Standard
----
-
-Todos:
-
-- [ ] Provide an example
-- [ ] Decide whether to keep it
-
-### FAMER IM Status: needs work/needs expert evaluation
-
-- Note that IM has Standard and Application Standard
-- These might be internal industry standards that define annotation guidelines. Perhaps those should be special annotation guidelines, e.g. generic annotation guidelines.
-
-- [x] rename to AnnotationStandard?
-- [ ] ask Participant 1
-  - There is no real annotation standard
-  - there is standardization of the output, how to store Dataset Annotations
-    - those are not widely used, converters needed
-  - annotation standard might be misleading, how to do annotations should be transparent, clients should not care about it. they should care about the speed and cost and accuracy of annotation, not on how to do it. Example: bounding box for pedestrians; one could use a polygon, but that is much more expensive. There is no standard, though, so negotiation between client and annotation provider
-
-- [ ] Ask Researcher 1 if we actually need it
-  - Researcher 2: We might need a specification or customer-supplier agreement.
-
-<treqs-link type="input" target="9f336b1a28b7439899012241f15623ec" />
-
-</treqs-element>
 
 ## FAMER discussion
 
