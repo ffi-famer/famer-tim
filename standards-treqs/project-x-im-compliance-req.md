@@ -1,0 +1,44 @@
+<treqs-element id="bf37f1b6dc6b4ffb8b41232a8f6e39c4" type="compl.requirement">
+
+Project X TIM should be aligned with Project X IM
+===
+
+</treqs-element>
+
+<treqs-element id="a908958df06f4c9795e421a1f68755dc" type="compl.requirement">
+
+Project X TIM should be as easy to use as possible
+---
+
+- Simpler than Project X IM (less artifacts, less links)
+- Consistent naming and link style
+
+</treqs-element>
+
+<treqs-element id="90dd952b69d8428588e593594b3ef107" type="compl.requirement">
+
+Project X TIM shall not contradict or over-simplify relevant standards
+---
+
+Specifically, the Project X TIM shall be consistent with ISO 8800 and ISO 21448.
+
+</treqs-element>
+<treqs-element id="69c0ff8e30134ffdbcb8bb0b645907cb" type="compl.requirement">
+
+Project X TIM shall be validated with experts from Project X consortium
+---
+
+Feedback from iterative validation workshops may lead to Project X TIM design decisions that are then motivated in this way.
+The concrete feedback will be either logged in the design decision or in tim-rationale.md.
+</treqs-element>
+<treqs-element id="19c6d0ea9e2f61160c68a5569f784f7c" type="compl.requirement">
+
+Project X TIM shall be compatible with a realistic model-based engineering method
+---
+
+Parallel to the bottom-up development of the Project X TIM in this repository, the OEM also developed the Project X TIM top down, starting from their systems engineering needs.
+For this purpose, we have sketched a realistic model-based systems engineering method that makes use of the TIM elements.
+
+Aligning the Project X TIM with this MBSE method helps to ensure practical value of the TIM.
+</treqs-element>
+
