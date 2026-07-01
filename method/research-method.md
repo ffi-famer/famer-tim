@@ -5,7 +5,7 @@
 class qualitative_data
 class interview_data
 class precog_interview_data
-class famer_interview_data
+class projx_interview_data
 class information_model
 class information_model_glossary
 class information_model_validation
@@ -15,10 +15,10 @@ class 8800
 qualitative_data <|-- interview_data
 
 interview_data <|-- precog_interview_data
-interview_data <|-- famer_interview_data
-famer_interview_data <|-- information_model_validation
-famer_interview_data  <|-- REFSQ25_data
-famer_interview_data  <|-- RE25_ICSE_JSS_data
+interview_data <|-- projx_interview_data
+projx_interview_data <|-- information_model_validation
+projx_interview_data  <|-- REFSQ25_data
+projx_interview_data  <|-- RE25_ICSE_JSS_data
 
 information_model <.. information_model_validation
 standards <. information_model

@@ -13,7 +13,7 @@ Satisfies the relevant AI Safety Requirements
 </treqs-link>
 
 > In this section, one would expect an AI model that is trained/evaluated with annotated data.
-> This model should also be explained, ideally using treqs-elements corresponding to the FAMER Information Model.
+> This model should also be explained, ideally using treqs-elements corresponding to the Project X Information Model.
 
 ## Attributes
 

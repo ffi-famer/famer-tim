@@ -1,6 +1,6 @@
-# Famer TIM
+# Reference Traceability Information Model (TIM) for AI-enabled Perception Systems
 
-A Traceability Information Model (TIM) for AI-based perception systems in safety-critical automotive applications, developed as part of the [FAMER](https://ffi-famer.github.io/) project.
+A Traceability Information Model (TIM) for AI-based perception systems in safety-critical automotive applications, developed as part of the Project X.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ A Traceability Information Model (TIM) for AI-based perception systems in safety
 
 ## Description
 
-FAMER TIM defines the artifact types and traceability links needed to demonstrate compliance with ISO safety standards when developing AI-based
+This Reference TIM defines the artifact types and traceability links needed to demonstrate compliance with ISO safety standards when developing AI-based
 perception systems. It connects functional safety concepts, AI safety requirements, dataset and annotation requirements, AI models, and validation results into a single traceable model.
 
 The model is implemented using [Treqs](https://pypi.org/project/treqs-ng/), an open source command-line tool for managing textual requirements and traceability directly in Git-versioned Markdown files.
@@ -37,7 +37,7 @@ Verify the installation:
 treqs --help
 ```
 
-It's recommended to install it inside a virtual environment:
+It is recommended to install it inside a virtual environment:
 
 ```bash
 python -m venv venv
@@ -65,7 +65,7 @@ treqs list --outlinks --uid d13a197ac7ce11f0ae0a467a017f3d7d
 
 **4.Generate the graphical traceability model:**
 ```bash
-treqs list --plantuml --outlinks tim-documentation/famer-tim-rationale.md
+treqs list --plantuml --outlinks tim-documentation/tim-rationale.md
 ```
 
 **5. Generate a standards-to-element overview**, e.g. for annotation requirements:
@@ -76,16 +76,16 @@ treqs list --plantuml --inlinks --followlinks True --type annotation-requirement
 ## Repository Structure
 
 ```bash
-famer-tim/
+reference-tim/
 ├── example/                           # Concrete example artifacts 
 ├── method/
 │   └── research-method.md             # Research method description
 ├── standards-treqs/                   # Compliance requirements derived from
-│                                       # ISO standards, linked to TIM elements
+│                                      # ISO standards, linked to TIM elements
 ├── templates/                         # Reusable templates for new TIM elements
 ├── tim-documentation/
-│   ├── famer-tim-design-decisions.md  # Documented modeling decisions
-│   └── famer-tim-rationale.md         # TIM elements, links, and design rationale
+│   ├── tim-design-decisions.md        # Documented modeling decisions
+│   └── tim-rationale.md               # TIM elements, links, and design rationale
 └── ttim.yaml                          # Type and trace information model schema
 ```
 
@@ -109,7 +109,7 @@ famer-tim/
 | `dataset-annotation-check-result` | Outcome of a check, including pass/fail status |
 
 Full type definitions and allowed links are specified in [`ttim.yaml`](./ttim.yaml).
-The following graph shows a visualization of the model derived from the file [famer-tim-rationale.md](tim-documentation/famer-tim-rationale.md).
+The following graph shows a visualization of the model derived from the file [tim-rationale.md](tim-documentation/tim-rationale.md).
 
 ```mermaid
 graph TD
@@ -155,8 +155,8 @@ These clauses are summarized in ``compl.requirements``, showing our commitment t
 Beyond standards, we also derive ``compl.requirements`` from interaction with experts from industrial practice and research done in a joint research project.
 
 Starting from a first draft of a TIM, we then iteratively improve it to align it with the (growing) set of ``compl.requirements``.
-Each change has been documented as a ``famer.tim.modeling-decision``.
-Each TIM modeling decision is traced back to the requirement(s) that motivated it and the TIM elements it affects; these decisions can be found in [famer-tim-design-decisions.md](tim-documentation/famer-tim-design-decisions.md).
+Each change has been documented as a ``tim.modeling-decision``.
+Each TIM modeling decision is traced back to the requirement(s) that motivated it and the TIM elements it affects; these decisions can be found in [tim-design-decisions.md](tim-documentation/tim-design-decisions.md).
 For traceability, we rely on ``treqs`` explicit tracelinks (``treqs-link``) which are visible in the source view of markdown files. 
 TReqs defines artifacts and tracelinks in its [metamodel](ttim.yaml) and enforces valid traceability via the CLI command ``treqs check``.
 
@@ -164,7 +164,7 @@ The following graph shows an example of the traceability from TIM artifacts over
 
 ```mermaid
 graph TD
-    b44158eee5584f63818c1a70f869f879["Decision: ``Dataset-Annotation Check`` and ``Dataset-Anno...<br/>[famer.tim.modeling-decision]"]
+    b44158eee5584f63818c1a70f869f879["Decision: ``Dataset-Annotation Check`` and ``Dataset-Anno...<br/>[tim.modeling-decision]"]
     9f336b1a28b7439899012241f15623ec["Dataset Annotation Check<br/>[dataset-annotation-check]"]
     b44158eee5584f63818c1a70f869f879 -->|affects| 9f336b1a28b7439899012241f15623ec
     7b8e858a6fe84f67843584e2f2ba8929["Dataset Annotation Check Result<br/>[dataset-annotation-check-result]"]
@@ -183,11 +183,10 @@ graph TD
 
 Created by:
 
-- Claudia Sevilla Eslava
-- Hina Saeeda
-- Eric Knauss
+- Researcher 1
+- Researcher 2
+- Researcher 3
 
-Supervisor: Eric Knauss
 
 ## Project Status
 
@@ -196,6 +195,4 @@ This is a research-in-progress model. Various elements and link directions are s
 ## License
 
 Licensed with the [MIT License](https://opensource.org/licenses/MIT). 
-
-
 

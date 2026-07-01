@@ -1,4 +1,4 @@
-FAMER Annotation Guideline
+PROJECT X Annotation Guideline
 ===
 
 <treqs-element id="09c5c0683c0b11f1a001467a017f3d7d" type="annotation-guideline">
