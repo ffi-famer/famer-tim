@@ -1,4 +1,4 @@
-# FAMER TIM Design Decisions
+# Reference TIM Design Decisions
 
 This file explains TIM design decisions.
 Each TIM design decision *affects* a primary TIM element (i.e. a traceable artifact) and links them to a motivating compliance requirement.
@@ -7,7 +7,7 @@ The ``treqs`` tool can be used to explore this traceability:
 
 ```bash
 # List all TIM design decisions:
-treqs list --type famer.tim.modeling-decision
+treqs list --type tim.modeling-decision
 
 # To explore the impact and motivation of an individual design decision, select
 # its UID from the output of the previous command. Then insert it into the 
@@ -26,7 +26,7 @@ More details can be found in the remaining parts of this file.
 
 ```mermaid
 graph TD
-    b44158eee5584f63818c1a70f869f879["Decision: ``Dataset-Annotation Check`` and ``Dataset-Anno...<br/>[famer.tim.modeling-decision]"]
+    b44158eee5584f63818c1a70f869f879["Decision: ``Dataset-Annotation Check`` and ``Dataset-Anno...<br/>[tim.modeling-decision]"]
     9f336b1a28b7439899012241f15623ec["Dataset Annotation Check<br/>[dataset-annotation-check]"]
     b44158eee5584f63818c1a70f869f879 -->|affects| 9f336b1a28b7439899012241f15623ec
     7b8e858a6fe84f67843584e2f2ba8929["Dataset Annotation Check Result<br/>[dataset-annotation-check-result]"]
@@ -41,7 +41,7 @@ graph TD
     b44158eee5584f63818c1a70f869f879 -->|motivatedBy| 0e53f83ec7d011f0a761467a017f3d7d
 ```
 
-<treqs-element id="1fd8176242ff442ba47446a35f9dcf5f" type="famer.tim.modeling-decision">
+<treqs-element id="1fd8176242ff442ba47446a35f9dcf5f" type="tim.modeling-decision">
 
 Decision: Split ``requirement`` into ``annotationRequirement``and ``systemRequirement``
 ---
@@ -81,9 +81,9 @@ We may need the following elements:
 <treqs-link type="motivatedBy" target="bf37f1b6dc6b4ffb8b41232a8f6e39c4" />
 </treqs-element>
 
-<treqs-element id="fb8744e032bc410c909de320cc09e962" type="famer.tim.modeling-decision">
+<treqs-element id="fb8744e032bc410c909de320cc09e962" type="tim.modeling-decision">
 
-Decision: ``AI Model`` concept needed in FAMER TIM and should include attributes such as ``Model Version``
+Decision: ``AI Model`` concept needed in Reference TIM and should include attributes such as ``Model Version``
 ---
 
 |Change|Status|
@@ -97,7 +97,7 @@ Decision: ``AI Model`` concept needed in FAMER TIM and should include attributes
 
 Rationale:
 
-- Alignment with FAMER Information model <treqs-link type="motivatedBy" target="bf37f1b6dc6b4ffb8b41232a8f6e39c4" />
+- Alignment with Reference Information model <treqs-link type="motivatedBy" target="bf37f1b6dc6b4ffb8b41232a8f6e39c4" />
 
 <treqs-link type="motivatedBy" target="2a068bbec7d011f08f25467a017f3d7d">
 
@@ -108,7 +108,7 @@ Rationale:
 </treqs-link>
 </treqs-element>
 
-<treqs-element id="f5f7e858b91e479ea19321b9f18f06cd" type="famer.tim.modeling-decision">
+<treqs-element id="f5f7e858b91e479ea19321b9f18f06cd" type="tim.modeling-decision">
 
 Decision: Rename ``Standard`` to ``Annotation Standard``
 ---
@@ -122,7 +122,7 @@ Decision: Rename ``Standard`` to ``Annotation Standard``
 <treqs-link type="motivatedBy" target="bf37f1b6dc6b4ffb8b41232a8f6e39c4" />
 </treqs-element>
 
-<treqs-element id="7087bf57de9b4dbc8f6b65290dbce754" type="famer.tim.modeling-decision">
+<treqs-element id="7087bf57de9b4dbc8f6b65290dbce754" type="tim.modeling-decision">
 
 Decision: Consider renaming ``Annotated Data`` into ``dataset annotations`` to be consistent with ISO8800 terminology
 --
@@ -131,7 +131,7 @@ Decision: Consider renaming ``Annotated Data`` into ``dataset annotations`` to b
 <treqs-link type="affects" target="3eac6b785ba245a284185f6edbfc0767" />
 </treqs-element>
 
-<treqs-element id="c94ad56694374007b0b691004415676e" type="famer.tim.modeling-decision">
+<treqs-element id="c94ad56694374007b0b691004415676e" type="tim.modeling-decision">
 
 Rejected Proposal: Tracelinks should point from the concret to the abstract
 ---
@@ -145,7 +145,7 @@ Rationale:
 <treqs-link type="motivatedBy" target="a908958df06f4c9795e421a1f68755dc" />
 </treqs-element>
 
-<treqs-element id="b6fadcf9ef814c1ca89782f8293e56fc" type="famer.tim.modeling-decision">
+<treqs-element id="b6fadcf9ef814c1ca89782f8293e56fc" type="tim.modeling-decision">
 
 Decision: Tracelinks should point from the abstract to the concret
 ---
@@ -159,7 +159,7 @@ Rationale:
 <treqs-link type="affects" target="b6fadcf9ef814c1ca89782f8293e56fc" />
 </treqs-element>
 
-<treqs-element id="bc730e9b88e74e8dab06780537db5c1d" type="famer.tim.modeling-decision">
+<treqs-element id="bc730e9b88e74e8dab06780537db5c1d" type="tim.modeling-decision">
 
 Proposal: Merge ``Annotation Standard`` into ``Annotation Guideline``
 ---
@@ -176,7 +176,7 @@ Rationale:
 <treqs-link type="affects" target="7b8e858a6fe84f67843584e2f2ba8929" />
 <treqs-link type="affects" target="79a0763913e946e7b238deb3eb705ecb" />
 </treqs-element>
-<treqs-element id="28a09448216c49f9bd7885fe3bed8baf" type="famer.tim.modeling-decision">
+<treqs-element id="28a09448216c49f9bd7885fe3bed8baf" type="tim.modeling-decision">
 
 Decision: Rename Test Scenario to Dataset-Annotation Check
 ---
@@ -193,7 +193,7 @@ Implication:
 <treqs-link type="affects" target="7b8e858a6fe84f67843584e2f2ba8929" />
 <treqs-link type="motivatedBy" target="69c0ff8e30134ffdbcb8bb0b645907cb" />
 </treqs-element>
-<treqs-element id="b44158eee5584f63818c1a70f869f879" type="famer.tim.modeling-decision">
+<treqs-element id="b44158eee5584f63818c1a70f869f879" type="tim.modeling-decision">
 
 Decision: ``Dataset-Annotation Check`` and ``Dataset-Annotation Check Results`` needed in TIM
 ---
@@ -208,7 +208,7 @@ Rationale:
 <treqs-link type="affects" target="7b8e858a6fe84f67843584e2f2ba8929" />
 <treqs-link type="motivatedBy" target="7513380ac18611f0ac17467a017f3d7d">
 
-- ISO-21448-R4 (Residual Risk), Consequence for FAMER TIM:
+- ISO-21448-R4 (Residual Risk), Consequence for Reference TIM:
   - Acceptance criteria should be defined on system level. Thus, this should already be incorporated in the DataRequirements.
   - Confirms that test results support demonstration of residual risk acceptance criteria.
 
@@ -221,7 +221,7 @@ Rationale:
 </treqs-link>
 <treqs-link type="motivatedBy" target="47e7ac2a01b011f1949d467a017f3d7d"> 
 
-- ISO-26262-R2: Verification of software safety requirements, Consequence for FAMER TIM:
+- ISO-26262-R2: Verification of software safety requirements, Consequence for Reference TIM:
   - Demands for explicit checks and check results, which we believe also holds for data annotations
   - Test results provide verification evidence that AI safety requirements are correct and consistent.
   - Complements ISO-8800-R2 (KPI validation) since testing is the primary verification method for AI safety requirements.
@@ -229,15 +229,15 @@ Rationale:
 </treqs-link>
 <treqs-link type="motivatedBy" target="0e53f83ec7d011f0a761467a017f3d7d">
 
-- ISE-8800-R2: Measurable KPIs for AI safety requirements, Consequence for FAMER TIM:
+- ISE-8800-R2: Measurable KPIs for AI safety requirements, Consequence for Reference TIM:
   - Annotation Data Checks should be designed to measure specific KPIs
   - Annotation Data Check Results validate whether KPI thresholds are met
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="1f122cf28eab48818e1b23fd7bc7f7b5" type="famer.tim.modeling-decision">
+<treqs-element id="1f122cf28eab48818e1b23fd7bc7f7b5" type="tim.modeling-decision">
 
-Decision: ``Dataset Annotation`` concept needed in FAMER TIM
+Decision: ``Dataset Annotation`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="3eac6b785ba245a284185f6edbfc0767" />
@@ -246,20 +246,20 @@ Rationale:
 
 <treqs-link type="motivatedBy" target="299cff3cc7d011f09c18467a017f3d7d">
 
-- ISO-8800-R4: Maintenance of AI input space, Consequence for FAMER TIM:
+- ISO-8800-R4: Maintenance of AI input space, Consequence for Reference TIM:
   - Dataset annotations represent the concrete implementation of the defined input space
 
 </treqs-link>
 <treqs-link type="motivatedBy" target="2a068bbec7d011f08f25467a017f3d7d">
 
-- ISO-8800-R5: Development measures in AI model training, Consequences for FAMER TIM:
+- ISO-8800-R5: Development measures in AI model training, Consequences for Reference TIM:
   - Dataset-annotations may be needed to make an argument about covering development measures, if arguing via annotation requirements is too abstract.
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="8b27b6962a4043e48c6dd098e1b67fc2" type="famer.tim.modeling-decision">
+<treqs-element id="8b27b6962a4043e48c6dd098e1b67fc2" type="tim.modeling-decision">
 
-Decision: ``Intended Functionality needed in FAMER TIM``
+Decision: ``Intended Functionality needed in Reference TIM``
 ---
 
 <treqs-link type="affects" target="5a0039ffee7a4924bfe423956918f750" />
@@ -268,26 +268,26 @@ Rationale:
 
 <treqs-link type="motivatedBy" target="296db62eaf7411f08318467a017f3d7d">
 
-- ISO-21448-R1: Intended functionality, Consequence for FAMER TIM:
+- ISO-21448-R1: Intended functionality, Consequence for Reference TIM:
   - Dedicated functional requirements should be available. Thus, recommendation to split requirements into functional-requirement and annotation-requirement.
 
 </treqs-link>
 <treqs-link type="motivatedBy" target="2ae06428c18711f0975d467a017f3d7d">
 
-- ISO-21448-R6: Systematic approach to identify functional insufficiencies, Consequence for FAMER TIM:
-  - Functional insufficiencies reside on system level, and may be out of scope for FAMER TIM. Intended functionality can be one way to give at least traceable targets to cover this need.
+- ISO-21448-R6: Systematic approach to identify functional insufficiencies, Consequence for Reference TIM:
+  - Functional insufficiencies reside on system level, and may be out of scope for Reference TIM. Intended functionality can be one way to give at least traceable targets to cover this need.
 
 </treqs-link>
 <treqs-link type="motivatedBy" target="292c14d4c7d011f081ed467a017f3d7d">
 
-- ISO-8800-R3: Traceability between safety and data requirements, Consequences for FAMER TIM:
+- ISO-8800-R3: Traceability between safety and data requirements, Consequences for Reference TIM:
   - High level functionality must be covered to allow for such traceability.
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="ba947582a3cc4d168938d2b092e85afa" type="famer.tim.modeling-decision">
+<treqs-element id="ba947582a3cc4d168938d2b092e85afa" type="tim.modeling-decision">
 
-Decision: ``Data Set Requirement`` concept needed in FAMER TIM
+Decision: ``Data Set Requirement`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="667438ccdfef413aa485ff2581d6ffc5" />
@@ -296,7 +296,7 @@ Rationale:
 
 <treqs-link type="motivatedBy" target="d13a197ac7ce11f0ae0a467a017f3d7d">
 
-- ISO-8800-R1: AI safety reqt derived from system level safety reqt, Consequences for FAMER TIM
+- ISO-8800-R1: AI safety reqt derived from system level safety reqt, Consequences for Reference TIM
   - To address functional insufficiencies, AI safety requirements must trace to data requirements.
 
 </treqs-link>
@@ -319,9 +319,9 @@ Rationale:
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="2ab9c45cea1a4adc8d643d44689b4e99" type="famer.tim.modeling-decision">
+<treqs-element id="2ab9c45cea1a4adc8d643d44689b4e99" type="tim.modeling-decision">
 
-Decision: ``Annotation Requirement`` and ``Annotation Guideline`` concept needed in FAMER TIM
+Decision: ``Annotation Requirement`` and ``Annotation Guideline`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="40a7bac946a34174844e42378d23e489" />
@@ -365,9 +365,9 @@ Rationale:
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="c6bbf8ea300149098f16fff163bf7e7f" type="famer.tim.modeling-decision">
+<treqs-element id="c6bbf8ea300149098f16fff163bf7e7f" type="tim.modeling-decision">
 
-Decision: ``Functional Safety Requirement`` concept needed in FAMER TIM
+Decision: ``Functional Safety Requirement`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="de34d5f3d3a24e8ba360001b5aa25922" />
@@ -382,9 +382,9 @@ Rationale:
   
 </treqs-link>
 </treqs-element>
-<treqs-element id="b5f5cc84152642ee96df9c539723aaa2" type="famer.tim.modeling-decision">
+<treqs-element id="b5f5cc84152642ee96df9c539723aaa2" type="tim.modeling-decision">
 
-Decision: ``AI Safety Requirement`` concept needed in FAMER TIM
+Decision: ``AI Safety Requirement`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="b46bb22119ac47028bee515844fcbf33" />
@@ -425,9 +425,9 @@ Rationale:
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="4984f48d700e481db45df1e71881b688" type="famer.tim.modeling-decision">
+<treqs-element id="4984f48d700e481db45df1e71881b688" type="tim.modeling-decision">
 
-Decision: ``Operational Design Domain`` concept needed in FAMER TIM
+Decision: ``Operational Design Domain`` concept needed in Reference TIM
 ---
 
 <treqs-link type="affects" target="9c3484c82d124e76a694554125353df9" />
@@ -455,7 +455,7 @@ Rationale:
 
 </treqs-link>
 </treqs-element>
-<treqs-element id="bd41fd67a783159c85d613035ea1962f" type="famer.tim.modeling-decision">
+<treqs-element id="bd41fd67a783159c85d613035ea1962f" type="tim.modeling-decision">
 
 Decision: Remove Annotation standard
 ---
@@ -466,7 +466,7 @@ Rationale:
 
 <treqs-link type="motivatedBy" target="69c0ff8e30134ffdbcb8bb0b645907cb">
 
-- FAMER experts inform us that no accepted standard exists and that annotation requirements and annotation guidelines are sufficient to define data needs.
+- Project X experts inform us that no accepted standard exists and that annotation requirements and annotation guidelines are sufficient to define data needs.
 </treqs-link>
 </treqs-element>
 <treqs-element id="9f3344e454894c9e9141cdc835231f4d" type="deprecated-tim-element">
@@ -479,7 +479,7 @@ Todos:
 - [ ] Provide an example - not needed
 - [x] Decide whether to keep it - REMOVE
 
-### FAMER IM Status: needs work/needs expert evaluation
+### Reference IM Status: needs work/needs expert evaluation
 
 - Note that IM has Standard and Application Standard
 - These might be internal industry standards that define annotation guidelines. Perhaps those should be special annotation guidelines, e.g. generic annotation guidelines.
@@ -495,7 +495,7 @@ Todos:
   - Researcher 2: We might need a specification or customer-supplier agreement.
 
 </treqs-element>
-<treqs-element id="6a01b91f618424e7e97afbae00018bfb" type="famer.tim.modeling-decision">
+<treqs-element id="6a01b91f618424e7e97afbae00018bfb" type="tim.modeling-decision">
 
 Decision: reverse/rename link between ODD and Intended Functionality
 ---

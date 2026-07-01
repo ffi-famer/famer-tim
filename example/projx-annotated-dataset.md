@@ -1,9 +1,9 @@
-FAMER Dataset Annotations
+PROJECT X Dataset Annotations
 ===
 
 <treqs-element id="c82de4d298874abd90b8e7bd0ed32b99" type="annotation-requirement">
 
-FAMER-Annotation-Req-1: Objects for path planning shall be annotated in 2D and 3D
+PROJ-X-Annotation-Req-1: Objects for path planning shall be annotated in 2D and 3D
 ---
 
 All static and dynamic objects relevant to collision avoidance path planning shall be annotated with connected 2D boxes and 3D cuboids.
@@ -27,7 +27,7 @@ Input to dataset annotation test
 
 <treqs-element id="2f719092667b410eb93600352131a4df" type="dataset-requirement">
 
-FAMER-Dataset-Req-1: Dataset shall support CAS safe path planning perception
+PROJ-X-Dataset-Req-1: Dataset shall support CAS safe path planning perception
 ---
 
 The dataset shall be sufficient to train perception models for detecting objects and calculating safe steering paths in the CAS ODD.
@@ -45,7 +45,7 @@ The dataset shall be sufficient to train perception models for detecting objects
 
 <treqs-element id="efb61a8e77fb4332b26ffd229dd3a55e" type="ai-safety-requirement">
 
-FAMER-AI-Safety-Req-1: Perception system reliably detects objects for safe path calculation
+PROJ-X-AI-Safety-Req-1: Perception system reliably detects objects for safe path calculation
 ---
 
 The AI-based perception system shall reliably detect and track objects relevant to collision avoidance to enable safe steering path planning.
@@ -62,7 +62,7 @@ The AI-based perception system shall reliably detect and track objects relevant 
 
 <treqs-element id="e8a5c74366a84064bbb7e27c17d6abeb" type="functional-safety-requirement">
 
-FAMER-Functional-Safety-Req-1: CAS shall detect threats and provide safe path suggestions
+PROJ-X-Functional-Safety-Req-1: CAS shall detect threats and provide safe path suggestions
 ---
 
 The Collision Avoidance by Steering (CAS) system shall detect road threats and provide safe steering path suggestions to avoid collisions.
@@ -78,7 +78,7 @@ The Collision Avoidance by Steering (CAS) system shall detect road threats and p
 
 <treqs-element id="5f7dd5a569474dad89ee52408cfd70a3" type="functional-safety-concept">
 
-FAMER Functional-Safety-Concept: CAS detects objects and suggests safe steering paths
+PROJ-X-Functional-Safety-Concept: CAS detects objects and suggests safe steering paths
 ---
 
 The system achieves collision avoidance by:
@@ -93,7 +93,7 @@ The system achieves collision avoidance by:
 
 <treqs-element id="b4756dba365711f185b3467a017f3d7d" type="dataset-annotation">
 
-FAMER-Annotated-Data-1: CAS Object Detection Dataset v1.0
+PROJ-X-Annotated-Data-1: CAS Object Detection Dataset v1.0
 ---
 
 Dataset containing annotated sequences of road objects for training and evaluating the CAS perception system.

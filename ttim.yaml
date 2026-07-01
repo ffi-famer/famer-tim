@@ -1,7 +1,7 @@
-name: FAMER Requirements Type and Trace Information Model (TTIM)
+name: Reference Requirements Type and Trace Information Model (TTIM)
 version: 0.1.0
-description: Instantiation of the FAMER information model for treqs
-author: Hina Saeeda, Eric Knauss, Claudia Sevilla Eslava
+description: Instantiation of the Reference information model for treqs
+author: Researcher 1, 2, and 3
 types:
  # ###
  # Trying to get the context of annotation requirements correct with respect to standards
@@ -120,8 +120,8 @@ types:
   # A specific governing document for our system under development
   - name: compl.standard
     outlinks: []
-  # A design decision for the FAMER TIM that is based on compl.requirements
-  - name: famer.tim.modeling-decision
+  # A design decision for the Reference TIM that is based on compl.requirements
+  - name: tim.modeling-decision
     outlinks:
     - type: affects
     - type: motivatedBy

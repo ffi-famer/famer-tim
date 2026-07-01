@@ -1,9 +1,9 @@
-FAMER Test Scenario and Results
+Project X Test Scenario and Results
 ===
 
 <treqs-element id="31b676563bcc11f18bde467a017f3d7d" type="dataset-annotation-check">
 
-FAMER-Test-Scenario-1: CAS Object Detection Validation
+PROJ-X-Test-Scenario-1: CAS Object Detection Validation
 ---
 
 **Test Objective:**
@@ -36,7 +36,7 @@ This test aims to verify the plausibility of annotations in the CAS detection da
 
 <treqs-element id="9c31b2c03bcc11f19f0d467a017f3d7d" type="dataset-annotation-check-result">
 
-FAMER-Test-Result-1: Test Results (PASS)
+PROJ-X-Test-Result-1: Test Results (PASS)
 ---
 
 **Plausibility Checks:**

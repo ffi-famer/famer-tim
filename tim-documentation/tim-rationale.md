@@ -1,11 +1,11 @@
-# FAMER TTIM
+# Reference TIM
 
 For visualization, this document creates an instance of each item in the traceability model with the same name.
 It then adds links according to the traceability model.
 This allows to generate a graphical traceability model with the following command:
 
 ```bash
-treqs list --plantuml --outlinks tim-documentation/famer-tim-rationale.md
+treqs list --plantuml --outlinks tim-documentation/tim-rationale.md
 ```
 
 The resulting graph is shown at the end of this document.
@@ -121,7 +121,7 @@ Annotation Requirement
 
 |Reference|Status|Comment|
 |---:|---:|---:|
-|FAMER IM|okay||
+|Project X IM|okay||
 |ISO8800|Probably okay|input space constraints must be documented|
 |ISO21448|okay||
 
@@ -143,7 +143,7 @@ Annotation Guideline
 
 |Reference|Status|
 |---:|---:|
-|FAMER IM|Okay|
+|Project X IM|Okay|
 |ISO880|Okay|
 |ISO21448|Okay|
 
@@ -186,7 +186,7 @@ Participant 1:
 
 |Reference|Status|Comment|
 |---:|---:|---|
-|FAMER IM|Okay|Testresults may need refinement|
+|Project X IM|Okay|Testresults may need refinement|
 |ISO880|Okay||
 |ISO21448|Okay||
 
@@ -219,7 +219,7 @@ Participant 1:
 
 |Reference|Status|Comment|
 |---:|---:|---|
-|FAMER IM|Needs work|add Template and example|
+|Project X IM|Needs work|add Template and example|
 |ISO8800|Needs work|add Template and example|
 |ISO21448|okay||
 
@@ -247,7 +247,7 @@ Changed from Test Scenario to Dataset Annotation Check based on discussion today
 
 |Reference|Status|Comment|
 |---:|---:|---|
-|FAMER IM|okay|Provide example|
+|Project X IM|okay|Provide example|
 |ISO8800|Needs work|Change name|
 |ISO21448|okay||
 
@@ -258,7 +258,7 @@ Todos:
 
 Text below may be outdated, but expert check is needed.
 
-### FAMER IM Status: needs work/needs expert evaluation
+### Project X IM Status: needs work/needs expert evaluation
 
 - Can the IM Scenario be used? Perhaps it is a subtype?
 - IM Scenario is connected to Edge Case, perhaps it is something different?
@@ -297,7 +297,7 @@ Changed from ``Test Result`` to ``Dataset Annotation Check Result`` to be consis
 
 |Reference|Status|Comment|
 |---:|---:|---|
-|FAMER IM|okay|Renamed|
+|Project X IM|okay|Renamed|
 |ISO8800|okay||
 |ISO21448|okay||
 
@@ -306,7 +306,7 @@ Todos:
 - [ ] Provide an example
 - [x] May depend on ``Test Scenario`` resolution. We should however include it.
 
-### FAMER IM Status: needs expert evaluation
+### Project X IM Status: needs expert evaluation
 
 - Not included in IM. Actually needed? Could be important for dashboards.
 - Compare with other TIMs if this is usually included
@@ -329,7 +329,7 @@ Todos:
 - [ ] Provide an example
 - [ ] Decide whether to keep it
 
-### FAMER IM Status: needs expert evaluation
+### Project X IM Status: needs expert evaluation
 
 Tool version (and tool) is missing in information model. Do we need it? Perhaps, we would not need it if only internal, but since customers start to ask for standardized tools and generated annotations become more important, it could be a valuable addition. That would be an addition... Ask Participant 2?
 
@@ -349,7 +349,7 @@ Tool version (and tool) is missing in information model. Do we need it? Perhaps,
 
 ---
 
-## FAMER discussion
+## Project X discussion
 
 Participant 3: Connect to their TIM (ISO 8800 missing in their view atm)
 
@@ -359,7 +359,7 @@ Participant 2: Do we need only safety requirements? Otherwise, we should treat t
 - Important to keep the model simple for the lower levels of abstraction
   - Should that be on a specific, consolidated annotation requirement or on the annotation guideline?
 
-Participant 3: connect FAMER to distributed sensor, actuator, control (including protocols and network topology)
+Participant 3: connect Project X to distributed sensor, actuator, control (including protocols and network topology)
 
 - But would we have to have a specific tracelink?
 
